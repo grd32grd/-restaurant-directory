@@ -1,0 +1,32 @@
+html
+  head
+    title Restaurant Directory / Order Form
+    include includes/css.pug
+    style.
+      .column {
+      float: left;
+      }
+      .left{
+      width: 10%;
+      }
+      .right {
+      width: 25%;
+      }
+      .middle {
+      width: 65%;
+      }
+      
+  body(onload='init()')
+    p(style="font-weight: bold")= "User: " + session.username
+    include includes/loggedin.pug
+    hr
+
+    select#restaurant-select
+    br
+    br
+    #info
+    #main
+      #left.column.left
+      #middle.column.middle
+      #right.column.right
+    script(src='../views/clients/orderform.js')

@@ -1,0 +1,16 @@
+html
+    head
+        title Restaurant Directory / Home
+        include includes/css.pug
+    body
+        //Header info changes depending on session logged in/out status
+        if (session == undefined || session.loggedin == undefined || !session.loggedin)
+            include includes/loggedout.pug
+        else
+            p(style="font-weight: bold")= "Hello " + session.username + "!"
+            include includes/loggedin.pug
+        hr
+
+        h1 Home
+        p Welcome to the Restaurant Directory site.
+        p You can log in if already registered (or register a new account). From there, you can order from some of our avaiable restaurants!

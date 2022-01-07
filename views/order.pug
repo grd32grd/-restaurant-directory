@@ -1,0 +1,31 @@
+
+html 
+    head
+        title= "Restaurant Directory / " + user.username + " / Order ID: " + orderid
+        include includes/css.pug
+    body
+        //Header info changes depending on session logged in/out status
+        if (session == undefined || session.loggedin == undefined || !session.loggedin)
+            include includes/loggedout.pug
+        else
+            p(style="font-weight: bold")= "User: " + session.username
+            include includes/loggedin.pug
+
+        br
+        a(href="/users/" + user._id) Back to User Page
+        hr
+        h2= "Order ID: " + orderid
+        h3= "For User: " + user.username
+        h3= "Restaurant: " + order.name
+        hr
+
+        for item in Object.values(order.items)
+
+            h5=  item.quantity + "x " + item.name
+        hr
+        h5= "Subtotal: $" + order.subtotal.toFixed(2)
+        h5= "Tax: $" + (order.subtotal/10).toFixed(2)
+        h5= "Delivery Fee: $" + (order.delivery_fee).toFixed(2)
+        
+        h4(style="color: green")= "Total: $" + ((order.subtotal) + (order.subtotal/10) + (order.delivery_fee)).toFixed(2)
+

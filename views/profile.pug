@@ -1,0 +1,42 @@
+html 
+    head
+        title= "Restaurant Directory / " + profile.username + "'s Profile"
+        include includes/css.pug
+    body
+
+        //Header info changes depending on session logged in/out status
+        if (session == undefined || session.loggedin == undefined || !session.loggedin)
+            include includes/loggedout.pug    
+        else
+            p(style="font-weight: bold")= "User: " + session.username
+            include includes/loggedin.pug
+
+        hr
+        h2= "User Profile for: " + profile.username
+        //if (!(session == undefined || session.loggedin == undefined || !session.loggedin))
+        if (profile.username == session.username)
+            p Private Mode
+            input#yes(type='radio' name='privacy' value='yes')
+            label(for='yes') Yes
+            br
+            input#no(type='radio' name='privacy' value='no')
+            label(for='no') No
+            br
+            button#save(type='button') Save
+        if (profile.privacy)
+            script. 
+                document.getElementById("no").checked = false;
+                document.getElementById("yes").checked = true;
+        else 
+            script. 
+                document.getElementById("no").checked = true;
+                document.getElementById("yes").checked = false;
+
+        h4= "Order History:"
+        if (profile.orderhistory != undefined && Object.keys(profile.orderhistory).length > 0)
+            for orderid in Object.keys(profile.orderhistory)
+                a(href="/users/" + profile._id + "/orders/" + orderid)= "Order ID: " + orderid
+                br
+        else 
+            h5= "No Order"
+        script(src='../views/clients/privacy.js')
