@@ -30,7 +30,7 @@ app.use(express.urlencoded({extended: true}));
 
 /// SERVER ///
 
-mc.connect("mongodb://localhost:27017", function(err, client) {
+mc.connect("mongodb+srv://34guled34:Guu%40340@cluster0.iiiad.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", function(err, client) {
 	if (err) {
 		console.log("Error in connecting to database.");
 		console.log(err);
@@ -278,14 +278,9 @@ mc.connect("mongodb://localhost:27017", function(err, client) {
                 }
             });
         });
-    });
-
-    /*app.get('/assets/add.png', function(req, res){
-        res.render("assets/add.png");
-    });*/
-        
+    });       
 });
 
 /// PORT LISTENING ///
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 console.log("Listening on port 3000");

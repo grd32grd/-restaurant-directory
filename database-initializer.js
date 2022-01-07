@@ -13,7 +13,7 @@ let mongo = require('mongodb');
 let MongoClient = mongo.MongoClient;
 let db;
 
-MongoClient.connect("mongodb://localhost:27017/", function(err, client) {
+MongoClient.connect("mongodb+srv://34guled34:Guu%40340@cluster0.iiiad.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", function(err, client) {
   if(err) throw err;	
 
   db = client.db('a4');
