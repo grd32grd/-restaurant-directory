@@ -283,4 +283,5 @@ mc.connect("mongodb+srv://34guled34:Guu%40340@cluster0.iiiad.mongodb.net/myFirst
 
 /// PORT LISTENING ///
 app.listen(process.env.PORT || 3000);
+console.log(process.env.PORT);
 console.log("Listening on port 3000");
