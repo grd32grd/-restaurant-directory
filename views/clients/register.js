@@ -28,7 +28,6 @@ register.onclick = () =>{
             alert(JSON.parse(x.responseText));
         }
     }
-    
     x.open("PUT", "http://localhost:3000/register");
     x.setRequestHeader("Content-Type", "application/json");
     x.send(JSON.stringify(newUser));
