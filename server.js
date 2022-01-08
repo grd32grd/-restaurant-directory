@@ -10,7 +10,7 @@ app.set('view engine', 'pug');
 app.set('title','a4');
 
 let mongoStore = new MongoDBUsers({
-    uri: 'mongodb://localhost:27017/a4',
+    uri: 'mongodb+srv://34guled34:Guu%40340@cluster0.iiiad.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
     collection: 'sessions'
 });
 mongoStore.on('error', (error) => {console.log(error)});
