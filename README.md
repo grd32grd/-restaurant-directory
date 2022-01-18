@@ -1,6 +1,7 @@
 README for My Restaurant Directory
 
 App Link: https://damp-forest-16844.herokuapp.com/ (deployment process not complete yet, that's to say app functionality isn't complete when using this link )
+- Deployed using Terraform
 
 How to Install The Necessary Dependencies using NPM:
 - On the command line, enter the following commands to download the dependencies
@@ -21,6 +22,7 @@ Program Notes:
 - You can simulate another 'session' by opening the page in an incognito tab.
 
 Design Aspects:
+- Uses Terraform to deploy app.
 - Uses DOM model to create certain HTML elements in client JS files.
 - Incomporates RESTful design.
 - Utilizes asynchronous javascript and XML.
