@@ -23,10 +23,6 @@ Program Notes:
 
 Design Aspects:
 - MongoDB database is stored in the cloud.
-- Uses Terraform to deploy app.
-- Uses DOM model to create certain HTML elements in client JS files.
-- Incomporates RESTful design.
+- Utilizes Terraform to deploy app.
 - Utilizes asynchronous javascript and XML.
-- Makes use of mongoDB to store session, user, and order data.
-- Utilizes express routes to handle requests.
 - Pug templates used for the views.
