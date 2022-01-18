@@ -22,6 +22,7 @@ Program Notes:
 - You can simulate another 'session' by opening the page in an incognito tab.
 
 Design Aspects:
+- MongoDB database is stored in the cloud.
 - Uses Terraform to deploy app.
 - Uses DOM model to create certain HTML elements in client JS files.
 - Incomporates RESTful design.
