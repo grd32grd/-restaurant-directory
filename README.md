@@ -3,6 +3,9 @@ README for My Restaurant Directory
 App Link: https://damp-forest-16844.herokuapp.com/ (deployment process not complete yet, that's to say app functionality isn't complete when using this link )
 - Deployed using Terraform
 
+Description:
+- Web application using a cloud mongoDB database to store information on users as well as their orders from the numerous restaurants in the directory. 
+
 How to Install The Necessary Dependencies using NPM:
 - On the command line, enter the following commands to download the dependencies
     "npm i pug",
