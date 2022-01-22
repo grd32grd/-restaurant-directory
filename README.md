@@ -4,7 +4,7 @@ App Link: https://damp-forest-16844.herokuapp.com/ (deployment process not compl
 - Deployed using Terraform
 
 Description:
-- Web application using a cloud mongoDB database to store information on users as well as their orders from the numerous restaurants in the directory. 
+- Web application that allows users to log-in to a directory and order items from a variety of restaurants. Utilizes a mongoDB database stored in the cloud to store info on the users, their profile settings, and watch orders they process. 
 
 How to Install The Necessary Dependencies using NPM:
 - On the command line, enter the following commands to download the dependencies
